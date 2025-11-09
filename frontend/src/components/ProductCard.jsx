@@ -6,7 +6,7 @@ const ProductCard = ({ product }) => {
 
   return (
     <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow cursor-pointer"
-         onClick={() => navigate(`/products/${product.slug}`)}>
+         onClick={() => navigate(`/products/${product._id}`)}>
       <img 
         src={product.image} 
         alt={product.name}

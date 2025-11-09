@@ -117,10 +117,12 @@ const ProductDetail = () => {
     const fetchData = async () => {
       try {
         const productData = await getProductById(id);
+        console.log("id:",id);
         setProduct(productData);
         setSelectedVariant(productData.variants[0]);
 
         const plansData = await getEMIPlans(productData._id);
+        console.log("pData",productData);
         setEmiPlans(plansData);
       } catch (error) {
         console.error('Error fetching data:', error);
